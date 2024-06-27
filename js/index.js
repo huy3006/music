@@ -12,7 +12,7 @@ const app = {
   listSong: [
     {
       imagePath: "./image/son-tung-mtp.jpg",
-      songName: "Nơi này có anh",
+      songName: "Nơi này có anh nhé",
       singerName: "Sơn Tùng MTP",
       songPath: "./music/noi-nay-co-anh.mp3",
     },
