@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.music {
+  background: white;
+  margin: 70px;
+  width: 400px;
+  height: 770px;
+  border: 1px solid black;
+  box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.205);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.image-thumb {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    animation: imageRotate 20s linear infinite;
+}
+
+.singer-name {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}
+
+.song-name {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-family: Georgia, serif;
+    color: #4f4f4f;
+    font-style: italic;
+}
+
+.progress {
+    width: 100%;
+    margin-top: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+#progress-music {
+    width: 100%;
+    appearance: none;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#progress-music::-webkit-slider-runnable-track {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.128);
+    border: white;
+    border-radius: 20px;
+    height: 7px;
+    appearance: none;
+}
+
+#progress-music::-webkit-slider-thumb {
+    appearance: none;
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.777);
+    border-radius: 60%;
+    box-shadow: -407px 0 0 400px #33dcff;
+}
+
+.progress-time {
+    box-sizing: border-box;
+    padding-top: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 25px;
+}
+
+.cusor-pointer {
+    cursor: pointer;
+}
+
+.song-list {
+    margin-top: 20px;
+    background: white;
+    height: 380px;
+    padding: 2% 8% 0 12%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+
+.song-list-item {
+    background: rgba(0, 0, 0, 0.072);
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+}
+
+.image-song-list {
+    flex: 3fr;
+    align-self: center;
+}
+
+
+.image-item {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.info-song {
+    padding-left: 8%;
+    padding-top: 3%;
+    flex: 7fr;
+}
+
+.info-song .name{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info-song .singer{
+    color: rgba(0, 0, 0, 0.603);
+    font-size: 15px;
+}
+
+.heart {
+    position: fixed;
+    top: 0;
+    padding: 0;
+    animation: aniName 10s;
+    z-index: 1;
+}
+
+.active {
+    color: #33dcff;
+}
+
+@keyframes aniName {
+    to { top: 100%; }
+    
+}
+
+@keyframes imageRotate {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Music</title>
+  </head>
+  <body>
+    <!-- Content -->
+    <div class="app">
+      <div class="music">
+        <div class="info-song"></div>
+        <div class="action">
+          <i
+            class="fa fa-refresh cusor-pointer"
+            id="refresh-btn"
+            aria-hidden="true"
+            onclick="app.refreshAudio()"
+          ></i>
+          <i
+            class="fa fa-backward cusor-pointer"
+            id="backward-btn"
+            aria-hidden="true"
+            onclick="app.backOrNextSong('back')"
+          ></i>
+          <i
+            class="fa fa-play cusor-pointer"
+            id="play-btn"
+            aria-hidden="true"
+            onclick="app.playAudio()"
+          ></i>
+          <i
+            class="fa fa-pause cusor-pointer"
+            id="pause-btn"
+            aria-hidden="true"
+            onclick="app.pauseAudio()"
+          ></i>
+          <i
+            class="fa fa-forward cusor-pointer"
+            id="forward-btn"
+            aria-hidden="true"
+            onclick="app.backOrNextSong('next')"
+          ></i>
+          <i class="fa fa-snowflake-o cusor-pointer" aria-hidden="true"></i>
+        </div>
+        <div class="progress">
+          <input
+            id="progress-music"
+            type="range"
+            oninput="app.progressOnClick(value)"
+            muted="true"
+          />
+          <div class="progress-time">
+            <span id="current-time"></span>
+            <span id="total-time"></span>
+          </div>
+        </div>
+        <div class="audio-player">
+          <audio id="player" src="./music/noi-nay-co-anh.mp3"></audio>
+        </div>
+        <div class="song-list"></div>
+      </div>
+    </div>
+    <!-- Content -->
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
